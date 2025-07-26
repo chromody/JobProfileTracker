@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "JobProfileTracker",
+    "version": "1.0",
+    "author": "Jesus Villanueva-Segovia",
+    "description": "This is an extension that is meant to aid in the tracking of job profiles.",
+    "browser_action": {
+        "default_title": "JobProfileTracker",
+        "default_icon": {
+            "38": "icons/active_38.png"
+        },
+        "default_popup": "ui/popup/index.html"
+    },
+
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["ui/popup/scripts.js"]
+        }
+    ]
+}
