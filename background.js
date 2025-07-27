@@ -9,7 +9,7 @@ class Profile {
 //this function is meant to save a profile locally to be loaded in later.
 function saveProfile() {
   let profile = new Profile("Jesus", "Villanueva-Segovia", "Jesus Villanueva-Segovia")
-  let settingItem = browser.storage.local.set({ "Default": profile }).then(() => {console.log("Set {}", example.name)}, () => {console.log("Error setting profile")})
+  let settingItem = browser.storage.local.set({ "Default": profile }).then(() => {console.log("Set ", profile.name)}, () => {console.log("Error setting profile")})
 }
 
 function loadProfile() {

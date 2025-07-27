@@ -1,8 +1,10 @@
 document.getElementById("savebutton").addEventListener("click", () => {
-  browser.runtime.sendMessage({ action: "save" });
+    let firstName = document.getElementById("firstname").value
+    console.log(firstName)
+    browser.runtime.sendMessage({ action: "save" })
 })
 
 
 document.getElementById("loadbutton").addEventListener("click", () => {
-  browser.runtime.sendMessage({ action: "load" });
+  browser.runtime.sendMessage({ action: "load" })
 })
