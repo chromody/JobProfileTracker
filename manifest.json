@@ -19,7 +19,7 @@
         "storage"
     ],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": [ "./classes/profile.js", "background.js"]
     },
     "content_scripts": [
         {
